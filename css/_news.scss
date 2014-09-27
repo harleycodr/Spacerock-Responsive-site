@@ -1,0 +1,15 @@
+.posting {
+	border:solid thin $accent;
+	border-radius:10px;
+	margin-bottom:1em;
+	padding:1em;
+	overflow:hidden;
+	
+	img {
+		border-radius:10px;
+		float:right;
+		padding-left:1em;
+		max-width:40%;
+	}
+	
+}

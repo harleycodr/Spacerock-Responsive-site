@@ -1,0 +1,53 @@
+/* homepage start*/
+.left_col {
+	width:25%;
+	float:left;
+	padding:.5em;
+	background:#bce2f4;
+	border-radius:5px;
+}
+.right_col {
+	width:25%;
+	float:right;
+	padding:.5em;
+	background:#bce2f4;
+	border-radius:5px;
+}
+.middle_col {
+	width:45%;
+	padding:1em;
+	float:left;
+}
+#sister_sites {
+	clear:both;
+	background:#bbdaf9;
+	border-radius:0 0 5px 5px;
+	overflow:hidden;
+}
+.sister_site {
+	width:25%;
+	float:left;
+}
+.newslink {
+	float:right; 
+	font-size:.8em;
+	margin-bottom:5px;
+}
+#snapplecap {
+	margin-top:1em;
+}
+.snapplecap {
+	padding:1em;
+	border-radius:5px;
+	background:  #9dafea;
+	border:solid thin $accent;
+	color:$accent;
+}
+.storybox {
+	border-radius:5px;
+	border:  solid thin $accent;
+	padding:1em;
+	margin-bottom:1em;
+	background:#fff;
+}
+/* homepage end */

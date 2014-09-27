@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Welcome to Spacerock.com</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/mobilenav.js"></script>
+<script src="js/desktopnav.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel=stylesheet type="text/css" href="css/styles.css" />
+</head>
+<body>
+
+<!--mobilenav start-->
+<header id="banner_container">
+	<header id="banner">
+		<header id="banner_logo">
+			<img src="images/header.png" />
+		</header>
+		<header id="tagline">
+			Welcome to my Eclectic World!
+		</header>
+	</header><!--banner end-->
+<!--desktop nav start-->
+<nav id="desktopnav">
+			<ul class="navparent">
+                <li><a href="#" id="news" title="Click to expand">News  <span class="navarrow">&#9658;</span<</a>
+					<ul id="navchild_news" class="navchild">
+						<li><a href="#">Dynamic link1</a></li>
+						<li><a href="#">Dynamic link2 </a></li>
+						<li><a href="#">Dynamic link3 </a></li>
+					</ul>
+				</li>
+            </div>
+			</ul>
+            
+			<ul class="navparent">
+				<li><a href="#" id="photos" title="Click to expand">Photos <span class="navarrow">&#9658;</span<</a>
+					<ul id="navchild_photos" class="navchild">
+						<li><a href="#">Dynamic links</a></li>
+					</ul>  
+				</li>
+			</ul>
+              
+			<ul class="navparent">
+				<li><a href="#" id="about" title="Click to expand">About Me <span class="navarrow">&#9658;</span<</a>
+					<ul class="navchild" id="navchild_about">
+					<li><a href="#">About Me</a></li>
+					<li><a href="#">Web Portfolio</a></li>
+					<li><a href="#">Code Portfolio</a></li>
+				</ul>
+				</li>
+			</ul>
+            
+			<ul class="navparent">
+				<li>
+					<a href="#" id="collections" title="Click to expand">Collections <span class="navarrow">&#9658;</span<</a>
+					<ul class="navchild" id="navchild_collections">
+						<li><a href="#">Recipes</a></li>
+						<li><a href="#">Bookshelf</a></li>
+						<li><a href="#">Rants/Raves</a></li>
+						<li><a href="#">Funny Stuff</a></li>
+						<li><a href="#">Favorite Links</a></li>
+						<li><a href="#">Video Clips</a></li>
+						<li><a href="#">DVD Library</a></li>
+					</ul>
+				</li>
+			</ul> 
+            <div class="navparent" id="contact">
+                <a href="#" id="contact">Contact Me</a>
+            </div>
+		<header id="banner_icons">
+			
+			<p><div class="banner_icon banner_icon_home"><a href="#">&nbsp;</a></div></p>
+			<p><div class="banner_icon banner_icon_email"><a href="#">&nbsp;</a></div></p>
+			<p><div id="searchbox">
+				<form method="get" action="search.php">
+				<div id="searchformfield">
+					<input type="text" id="searchstring"   placeholder="Search Spacerock.com" />
+				</div>
+				<input class="banner_icon_search" type="submit" />&nbsp;</span></form>
+			</div></p>
+		</header>
+</nav><!--desktop nav end-->
+<nav id="mobilenavarea">
+		<div id="mobilenavtopbar">
+			<div style="float:left; width:20%;">
+				<div id="lines"></div>
+			</div>
+		</div>
+		
+		<nav id="mobilenav">
+			<div class="mobilenavparent">
+                <a href="#" id="news">News</a>
+			</div>
+            <div id="child_news" class="child">
+                <p>Dynamic links</p>
+            </div>
+			<div class="mobilenavparent">
+					 <a href="#" id="photos">Photos</a>
+			</div>
+            <div id="child_photos" class="child">
+                <p><a href="#">? Dynamic links</a></p>
+            </div>    
+			<div class="mobilenavparent">
+					 <a href="#" id="about">About Me</a>
+			</div>
+            <div class="child" id="child_about">
+                <p><a href="#">? About Me</a></p>
+                <p><a href="#">? Web Portfolio</a></p>
+                <p><a href="#">? Code Portfolio</a></p>
+            </div>
+			<div class="mobilenavparent">
+					 <a href="#" id="collections">Collections</a>
+			</div> 
+			<div class="child" id="child_collections">
+				<p><a href="#">Recipes</a></p>
+				<p><a href="#">Bookshelf</a></p>
+				<p><a href="#">Rants/Raves</a></p>
+				<p><a href="#">Funny Stuff</a></p>
+				<p><a href="#">Favorite Links</a></p>
+				<p><a href="#">Video Clips</a></p>
+				<p><a href="#">DVD Library</a></p>
+			</div>
+            <div class="mobilenavparent" id="contact">
+                <a href="#" id="contact">Contact Me</a>
+            </div>
+		</nav>
+</nav>
+<!--mobilenav end-->
+</header><!--banner_container-->
+<div class="clearfix"></div>
+	<article id="content">
+		<article class="left_col">
+			<h1>Left Column</h1>
+		</article>
+		<article class="middle_col">
+			<h1>News and Main Content</h1>
+		</article>
+		<article class="right_col">
+			<h1>Right col</h1>
+		</article>
+		<aside id="sister_sites">
+			<div class="sister_site">
+				Site 1
+			</div>
+			<div class="sister_site">
+				Site 2
+			</div>
+			<div class="sister_site">
+				Site 3
+			</div>
+			<div class="sister_site">
+				Site 4
+			</div>
+			
+		</aside><!--sister_sites-->
+	</article><!--content end-->
+	<footer id="pagefooter">
+		<p><a href="#">News</a>
+		<a href="#">Photos</a>
+		<a href="#">About Me</a>
+		<a href="#">Collections</a>
+		<a href="#">Contact Me</a>
+		<br /><a href="#">Home</a></p>
+		<p><img src="images/saturn.png" />
+		<br />Copyright 1996-2014
+		<br />Marian J. Stevens</p>
+	</footer>
+
+
+</body>
+</html>

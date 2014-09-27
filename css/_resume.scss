@@ -1,0 +1,15 @@
+/* resume start */
+.resume_section {
+	background:#39f;
+	font-weight:bold;
+	font-size:1.2em;
+	line-height:2em;
+	border:solid thin $accent;
+	cursor:pointer;
+}
+.resume_section_content {
+	padding:0 1em;
+	border:solid thin #ccc;
+	display:none;
+}
+/* resume end */

@@ -1,0 +1,29 @@
+/* photos start */
+.photocell {
+	float:left;
+	width:15%;
+	padding:1em;
+	margin-bottom:1em;
+	margin-right:1em;
+	border:solid thin $accent;
+	border-radius:10px;
+	img a {
+		border:none;
+	}
+	img {
+		max-width:100%;
+		max-height:100%;
+	}
+	min-height:275px;
+	text-align:center;
+	
+}
+.caption {
+		font-size:.8em;
+		font-style:italic;
+	}
+.photonav {
+	clear:both;
+	text-align:right;
+}
+/* photos end */
