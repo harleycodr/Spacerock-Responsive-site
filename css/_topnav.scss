@@ -9,6 +9,8 @@
 	width:98%;
 	margin-left:auto;
 	margin-right:auto;
+	font-size:.6em;
+	font-weight:bold;
 	a {
 		color:#ffff00;
 		text-decoration:none;
@@ -35,6 +37,7 @@
 	position:absolute;
 	top:3em;
 	background:#000;
+	z-index:999;
 	a{
 		color:#ffff00;
 		text-decoration:none;

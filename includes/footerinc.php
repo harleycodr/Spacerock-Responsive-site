@@ -7,19 +7,12 @@ print <<<ENDTAG
 		<a href="collections.php">Collections</a>
 		<a href="#" id="showcontactform">Contact Me</a>
 		<br /><a href="index.php">Home</a></p>
-		<p><a href="index.php"><img src="images/saturn.png" border="0" title="Click here to return to home page" />
+		<p><a href="index.php"><img src="images/saturn.png" border="0" title="Click here to return to home page" /></a>
 		<br />Copyright 1996-$thisyear
 		<br />Marian J. Stevens</p>
 	</footer>
 
-<script>
-	setTimeout("Validate_Submit()", 5000);
 
-	function Validate_Submit()
-	{
-		document.getElementById('hidden_field').value = 'SecretValue';
-	}
-</script>
 <script src="js/lightbox.js"></script>
     <script type="text/javascript">
         function showStuff(id) {
@@ -32,6 +25,19 @@ print <<<ENDTAG
             document.getElementById(id).style.display = 'none';
         }
     </script>
+	<script>
+		$('.showcontact').click(function(){
+		$('.lightbox').show();
+		$('#blackout').show();
+		$('#contactbox').show();
+	  
+		});
+		$('#close').click(function(){
+			$('lightbox').hide();
+			$('#blackout').hide();
+			$('#contactbox').hide();
+		});
+	</script>
 </body>
 </html>
 ENDTAG;

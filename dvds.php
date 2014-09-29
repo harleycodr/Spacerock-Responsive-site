@@ -102,6 +102,7 @@ if($link)
 
           	{
           	 $thecount=mysql_num_rows($result);
+				
           		while($row=mysql_fetch_array($result))
           		{
 
@@ -180,6 +181,7 @@ if($link)
 
 
           		}
+				
           	}
           	else
           	{
@@ -267,6 +269,33 @@ if($link)
             $goof=mysql_error();
             $error="<b>Error:</b>  $error";
         }
+	// mobile display stuff
+	if($result=mysql_query("SELECT
+		Title,
+		location,
+		Cover,
+		Synopsis,
+		ID
+		from ourmovies
+		order by Title"))
+		{
+			while($row=mysql_fetch_array($result))
+			{
+				$title=stripslashes($row[0]);
+				$location=$row[1];
+				$cover=$row[2];
+				$synopsis=stripslashes($row[3]);
+				$id=$row[4];
+				
+				$mdisplay .= "<div class=\"titlebar\" style=\"clear:both;\"><a href=\"#\" id=\"$id\" class=\"showmovie\">$title</a></div>\n";
+				$mdisplay .= "<div class=\"$id m-white_box\"><img src=\"/images/covers/$cover\" style=\"float:left; margin-right:3px;\" />$synopsis</div>\n";
+			}
+		}
+		else
+		{
+			$goof=mysql_error();
+			$error="<b>Error:</b>  $goof";
+		}
 }
 else
 {
@@ -290,11 +319,15 @@ print <<<ENDTAG
 <div id="movieholder">
 $display
 </div>
+<div id="mobilemovieholder">
+<h1 class="tac">DVD List</h1>
+$mdisplay
+</div>
 ENDTAG;
 }
 print <<<ENDTAG
 	</article><!--content end-->
 ENDTAG;
-include("footerinc.php");
+include("inclues/footerinc.php");
 ?>
 

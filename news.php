@@ -318,5 +318,5 @@ print <<<ENDTAG
 	</article><!--content end-->
 ENDTAG;
 }
-include("footerinc.php");
+include("includes/footerinc.php");
 ?>

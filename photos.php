@@ -134,7 +134,7 @@ if($link)
 				$error = "<b>Error:</b>  $goof\n";
 			}
 		default:
-		echo "unknown";
+		
 		
 	}
 	
@@ -174,6 +174,6 @@ ENDTAG;
 print <<<ENDTAG
 	</article><!--content end-->
 ENDTAG;
-include("footerinc.php");
+include("includes/footerinc.php");
 ?>
 

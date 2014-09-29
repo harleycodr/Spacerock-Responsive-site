@@ -112,9 +112,13 @@ print <<<ENDTAG
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="shortcut icon" href="favicon.ico" />
 <link rel=stylesheet type="text/css" href="css/styles.css" />
+
 </head>
 <body>
 <div id="blackout"></div>
+ENDTAG;
+include("includes/lightboxes.php");
+print <<<ENDTAG
 <!--mobilenav start-->
 <header id="banner_container">
 	<header id="banner">
@@ -184,14 +188,14 @@ print <<<ENDTAG
             </div>
 		<header id="banner_icons">
 			
-			<p><div class="banner_icon banner_icon_home"><a href="#" title="Return to Home Page">&nbsp;</a></div></p>
-			<p><div class="banner_icon banner_icon_email"><a href="#" title="Email Me">&nbsp;</a></div></p>
+			<p><div class="banner_icon banner_icon_home"><a href="index.php" title="Return to Home Page">&nbsp;</a></div></p>
+			<p><div class="banner_icon banner_icon_email"><a href="mailto:mstevens@spacerock.com" title="Email Me">&nbsp;</a></div></p>
 			<p><div id="searchbox">
 				<form method="get" action="search.php">
 				<div id="searchformfield">
 					<input type="text" id="searchstring"   placeholder="Search Spacerock.com" />
 				</div>
-				<input class="banner_icon_search" type="submit" />&nbsp;</span></form>
+				<input class="banner_icon_search" type="submit" title="Search" />&nbsp;</span></form>
 			</div></p>
 		</header>
 </nav><!--desktop nav end-->
@@ -210,7 +214,7 @@ print <<<ENDTAG
                 $newslinks
             </div>
 			<div class="mobilenavparent">
-					 <a href="#" id="photos">Photos</a>
+					 <a href="photos.php" id="photos">Photos</a>
 			</div>
             <div id="child_photos" class="child">
                 $albumlinks
@@ -228,15 +232,15 @@ print <<<ENDTAG
 			</div> 
 			<div class="child" id="child_collections">
 				<p><a href="recipes.php">Recipes</a></p>
-				<p><a href="bookshelf.php">Bookshelf</a></p>
-				<p><a href="rants.php">Rants/Raves</a></p>
+				<!--p><a href="bookshelf.php">Bookshelf</a></p-->
+				<p><a href="rants.php">Opinion</a></p>
 				<p><a href="funny.php">Funny Stuff</a></p>
 				<p><a href="fave-links.php">Favorite Links</a></p>
 				<p><a href="videoclips.php">Video Clips</a></p>
 				<p><a href="dvds.php">DVD Library</a></p>
 			</div>
             <div class="mobilenavparent" id="contact">
-                <a href="#" class="showcontact">Contact Me</a>
+                <a href="mailto:mstevens713@gmail.com">Contact Me</a>
             </div>
 		</nav>
 </nav>

@@ -89,7 +89,7 @@ if($link)
                   $leadpic=$row[1];
                   $albumname=stripslashes($row[2]);
 
-                  $featuredphoto.="<p class=\"tac\"><a class=\"photolink\" style=\"cursor:pointer;\" onclick=\"demoGallery();\"><img src=\"/photos/$leadpic\" border=\"0\" alt=\"featured photo album\" width=\"160\" /></a></p>\n";
+                  $featuredphoto.="<p class=\"tac\"><a href=\"photos.php?action=g&g=$cid\"><img src=\"/photos/$leadpic\" border=\"0\" alt=\"featured photo album\" width=\"160\" /></a></p>\n";
             			$featuredphoto.="<p class=\"tac\">$albumname</p>";
                 }
                 $filecount=0;
@@ -342,6 +342,7 @@ print <<<ENDTAG
 ENDTAG;
 include("includes/weatherwidget.php");
 print <<<ENDTAG
+	
 		<article class="storybox">
 			<h2>Guest Article</h2>
 			$guestarticle
@@ -408,6 +409,6 @@ ENDTAG;
 print <<<ENDTAG
 	</article><!--content end-->
 ENDTAG;
-include("footerinc.php");
+include("includes/footerinc.php");
 ?>
 

@@ -127,5 +127,5 @@ print <<<ENDTAG
 	</article><!--content end-->
 	$lightboxes
 ENDTAG;
-include("footerinc.php");
+include("inclues/footerinc.php");
 ?>

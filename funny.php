@@ -290,6 +290,6 @@ ENDTAG;
 print <<<ENDTAG
 	</article><!--content end-->
 ENDTAG;
-include("footerinc.php");
+include("inclues/footerinc.php");
 ?>
 

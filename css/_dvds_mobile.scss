@@ -1,0 +1,23 @@
+body {
+font-family:verdana, sans-serif;
+font-size:1.5em;
+}
+#container {
+	width:480px;
+}
+.m-white_box {
+	display:none;
+	width:475px;
+	outline:solid thin;
+}
+.titlebar {
+	background:#000;
+	margin:20px 0 20px 0;
+}
+.titlebar a {
+	color:#fff;
+	text-decoration:none;
+}
+h1 {
+	font-size:2em;
+}

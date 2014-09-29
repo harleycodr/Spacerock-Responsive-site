@@ -23,7 +23,8 @@ img {
   padding: .5em;
   width: 80%;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  font-size: .6em !important; }
 
 #leftsmalldevice {
   display: none; }
@@ -41,12 +42,12 @@ img {
   position: relative; }
 
 #tagline {
-  width: 32%;
+  width: 40%;
   float: right;
   color: #fff;
   font-size: 1.2em;
   font-style: italic;
-  padding-top: 2em; }
+  padding: 1em 0; }
 
 #banner_icons {
   width: 27%;
@@ -174,6 +175,9 @@ img {
   height: 0;
   clear: both; }
 
+#powered_by, .hidden {
+  display: none; }
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -237,7 +241,7 @@ table {
   border-radius: 5px; }
 
 .middle_col {
-  width: 45%;
+  width: 43%;
   padding: 1em;
   float: left; }
 
@@ -294,7 +298,8 @@ table {
   border: solid thin #fff;
   color: #fff;
   font-size: 1.2em;
-  font-weight: bold; }
+  font-weight: bold;
+  line-height: 2em; }
 
 .mobilenavparent a {
   color: #fff;
@@ -389,7 +394,9 @@ h4 {
   position: relative;
   width: 98%;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  font-size: .6em;
+  font-weight: bold; }
   #desktopnav a {
     color: #ffff00;
     text-decoration: none;
@@ -412,7 +419,8 @@ h4 {
   display: none;
   position: absolute;
   top: 3em;
-  background: #000; }
+  background: #000;
+  z-index: 999; }
   .navchild a {
     color: #ffff00;
     text-decoration: none; }
@@ -474,7 +482,7 @@ h4 {
   padding: 2em;
   border-radius: 10px; }
 
-.close {
+.close, #close {
   width: 50px;
   height: 50px;
   display: block;
@@ -570,7 +578,7 @@ h4 {
   padding: 1em;
   float: left; }
 
-.middle_col {
+.middle_col_links {
   width: 30%;
   padding: 1em;
   border-left: solid thin #290db2;
@@ -724,6 +732,74 @@ h4 {
   margin-left: auto;
   margin-right: auto; }
 
+body {
+  font-family: verdana, sans-serif;
+  font-size: 1.5em; }
+
+#container {
+  width: 480px; }
+
+.m-white_box {
+  display: none;
+  width: 475px;
+  outline: solid thin; }
+
+.titlebar {
+  background: #000;
+  margin: 20px 0 20px 0; }
+
+.titlebar a {
+  color: #fff;
+  text-decoration: none; }
+
+h1 {
+  font-size: 2em; }
+
+.contactbtn {
+  -moz-box-shadow: inset 0px 1px 5px -14px #97c4fe;
+  -webkit-box-shadow: inset 0px 1px 5px -14px #97c4fe;
+  box-shadow: inset 0px 1px 5px -14px #97c4fe;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #3d94f6), color-stop(1, #1e62d0));
+  background: -moz-linear-gradient(center top, #3d94f6 5%, #1e62d0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6', endColorstr='#1e62d0');
+  background-color: #3d94f6;
+  -webkit-border-top-left-radius: 23px;
+  -moz-border-radius-topleft: 23px;
+  border-top-left-radius: 23px;
+  -webkit-border-top-right-radius: 0px;
+  -moz-border-radius-topright: 0px;
+  border-top-right-radius: 0px;
+  -webkit-border-bottom-right-radius: 23px;
+  -moz-border-radius-bottomright: 23px;
+  border-bottom-right-radius: 23px;
+  -webkit-border-bottom-left-radius: 0px;
+  -moz-border-radius-bottomleft: 0px;
+  border-bottom-left-radius: 0px;
+  text-indent: 0;
+  border: 1px solid #337fed;
+  display: inline-block;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  height: 40px;
+  line-height: 40px;
+  width: 100px;
+  text-decoration: none;
+  text-align: center;
+  text-shadow: 1px 1px 9px #1570cd; }
+
+.contactbtn:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #1e62d0), color-stop(1, #3d94f6));
+  background: -moz-linear-gradient(center top, #1e62d0 5%, #3d94f6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e62d0', endColorstr='#3d94f6');
+  background-color: #1e62d0; }
+
+.contactbtn:active {
+  position: relative;
+  top: 1px; }
+
 /* breakpoints start */
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
@@ -809,7 +885,13 @@ h4 {
     display: block; }
 
   .portthumb {
-    cursor: arrow; } }
+    cursor: arrow; }
+
+  #movieholder {
+    display: none; }
+
+  #mobilemovieholder {
+    display: block; } }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .photocell {
     float: left;

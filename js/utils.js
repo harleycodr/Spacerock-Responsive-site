@@ -46,3 +46,23 @@ $(document).ready(function() {
        $("#mainpicholder").css ({ width:cssWidth, marginLeft:'auto', marginRight:'auto' });
     }
 });
+ $(document).ready(function(){
+    $('.showmovie').click(function()
+	{
+		var comdiv=$(this).attr('id');
+		$('.' + comdiv).slideToggle();  
+	});
+});
+$(document).ready(function(){
+	$('.showcontact').click(function(){
+		$('.lightbox').show();
+		$('#blackout').show();
+		$('#contactbox').show();
+	  
+	});
+	$('#close').click(function(){
+		$('lightbox').hide();
+		$('#blackout').hide();
+		$('#contactbox').hide();
+	});
+});

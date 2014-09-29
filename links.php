@@ -73,7 +73,7 @@ if($link)
 
 							if($count=="$limit")
 							{
-								$display .= "</ul></div><div class=\"middle_col">\n";
+								$display .= "</ul></div><div class=\"middle_col_links">\n";
 
 								if($thiscatrunningcount<$thiscatlinkcount)
 								{
@@ -130,6 +130,6 @@ ENDTAG;
 print <<<ENDTAG
 	</article><!--content end-->
 ENDTAG;
-include("footerinc.php");
+include("inclues/footerinc.php");
 ?>
 
