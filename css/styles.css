@@ -526,6 +526,9 @@ h4 {
   margin-left: auto;
   margin-right: auto; }
 
+.mobile_view {
+  display: none; }
+
 @media print {
   @page {
     size: letter portrait;
@@ -807,10 +810,10 @@ h1 {
   #banner_container {
     width: 100%; }
 
-  #desktopnav {
+  #desktopnav, .desktop_view {
     display: none; }
 
-  #mobilenavarea {
+  #mobilenavarea, .mobile_view {
     display: block; }
 
   #tagline {
@@ -877,12 +880,6 @@ h1 {
     float: none;
     width: 90%;
     border: none; }
-
-  .desktop_view {
-    display: none; }
-
-  .mobile_view {
-    display: block; }
 
   .portthumb {
     cursor: arrow; }

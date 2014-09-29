@@ -99,6 +99,65 @@ if($link)
 			$goof=mysql_error();
 			$error = "<b>Error:</b>  $goof\n";
 		}
+		// make the pagination
+		if($result2=mysql_query("SELECT name from portfolio"))
+		{
+			$portcount=mysql_num_rows($result2);
+		}
+		else
+		{
+			$goof=mysql_error();
+			$error="<b>Error:</b>  $goof";
+		}
+		$page_count=$portcount/12;
+		$rounded=round($page_count);
+		if($rounded<$page_count)
+        {
+            $page_count=$rounded+1;
+        }
+		
+        $next_page=$this_page+1;
+
+        $prev_page=$this_page-1;
+        // if this isn npt the first page, make a link to the previous
+        if($prev_page>0)
+        {
+            $pagination_links.="<a href=\"portfolio.php?page=$prev_page\"><</a>&nbsp;";
+
+                // show pages before this page
+
+
+                $pagination_counter=1;
+
+                while($pagination_counter<$this_page)
+                {
+                    $pagination_links .= "<a href=\"portfolio.php?page=$pagination_counter\">$pagination_counter</a>&nbsp;&nbsp;";
+                    $pagination_counter=$pagination_counter+1;
+                }
+                $pagination_links .= "<b>$this_page</b>&nbsp;&nbsp;";
+            }
+            else // this is page 1
+            {
+                $pagination_links.="<b>$this_page</b>&nbsp;&nbsp;";
+            }
+
+
+            // if this is not the last page, make a link to the next
+            if($this_page<$page_count)
+            {
+              // show pages after
+                $pagination_counter=$this_page+1;
+
+                $last_page_limiter=$page_count+1;
+
+                while($pagination_counter<$last_page_limiter)
+                {
+                    $pagination_links .= "<a href=\"portfolio.php?page=$pagination_counter\">$pagination_counter</a>&nbsp;&nbsp;";
+                    $pagination_counter=$pagination_counter+1;
+                }
+
+              $pagination_links.="<a href=\"portfolio.php?page=$next_page\" title=\"next\">></a>";
+            }
 	}
 }
 else
@@ -120,7 +179,11 @@ else
 
 print <<<ENDTAG
 	<h1 class="tac">Website Portfolio</h1>
+	<p class="tar">$pagination_links</p>
+	
 	$display
+	
+	<p class="tar" style="clear:both;">$pagination_links</p>
 ENDTAG;
 }
 print <<<ENDTAG
