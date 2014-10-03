@@ -317,10 +317,11 @@ else
 print <<<ENDTAG
 <p>$pagination_links</p>
 <div id="movieholder">
+<h1 class="tac">DVD List</h1>
+<div style="clear:both;"></div>
 $display
 </div>
 <div id="mobilemovieholder">
-<h1 class="tac">DVD List</h1>
 $mdisplay
 </div>
 ENDTAG;

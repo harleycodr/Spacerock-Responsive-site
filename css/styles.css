@@ -758,6 +758,9 @@ body {
 h1 {
   font-size: 2em; }
 
+#mobilemovieholder {
+  display: none; }
+
 .contactbtn {
   -moz-box-shadow: inset 0px 1px 5px -14px #97c4fe;
   -webkit-box-shadow: inset 0px 1px 5px -14px #97c4fe;
