@@ -259,7 +259,7 @@ include("includes/headerinc.php");
 
 print <<<ENDTAG
 <div class="clearfix"></div>
-	<article id="content">
+	<article id="content" class="clearfix">
 ENDTAG;
 if($error)
 {
