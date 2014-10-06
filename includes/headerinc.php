@@ -1,6 +1,13 @@
 <?php
 $thispage=$_SERVER['PHP_SELF'];
 $currentpage="http://www.spacerock.com$thispage";
+// current working directory 
+$currentdir = getcwd();
+if($currentdir == "/home/content/44/10809344/html/SPACEROCK/admintools")
+{
+	$toolsuite=1;
+}
+
 include("dbconnect.php");
 if($link)
 {
@@ -111,13 +118,26 @@ print <<<ENDTAG
 <script src="js/desktopnav.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="shortcut icon" href="favicon.ico" />
-<link rel=stylesheet type="text/css" href="css/styles.css" />
+<link rel=stylesheet type="text/css" href="http://www.spacerock.com/css/styles.css" />
+ENDTAG;
+if($toolsuite=="1")
+{
+print <<<ENDTAG
+<script type="text/javascript" src="http://www.spacerock.com/admintools/tinymce/js/tinymce/tinymce.min.js"></script>
+<script type="text/javascript">
+tinymce.init({
+    selector: "textarea"
+ });
+</script>
 
+ENDTAG;
+}
+print <<<ENDTAG
 </head>
 <body>
 <div id="blackout"></div>
 ENDTAG;
-include("includes/lightboxes.php");
+include("/home/content/44/10809344/html/SPACEROCK/includes/lightboxes.php");
 print <<<ENDTAG
 <!--mobilenav start-->
 <header id="banner_container">
@@ -126,12 +146,12 @@ print <<<ENDTAG
 ENDTAG;
 if($currentpage=="$homepage")
 {
-print  "<img src=\"images/header.png\" />\n";
+print  "<img src=\"/images/header.png\" />\n";
 
 }
 else
 {
-	print  "<a href=\"index.php\"><img src=\"images/header.png\" border=\"0\" title=\"Return to Home\" /></a>\n";
+	print  "<a href=\"index.php\"><img src=\"/images/header.png\" border=\"0\" title=\"Return to Home\" /></a>\n";
 }
 print <<<ENDTAG
 		</header>
