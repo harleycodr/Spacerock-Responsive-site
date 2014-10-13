@@ -529,8 +529,7 @@ else
     include("loginerror.php");
 }
 include("/home/content/44/10809344/html/SPACEROCK/includes/headerinc.php");
-print "
-<article id=\"content\">\n";
+print "<article id=\"content\">";
 if($error)
 {
     print "$error";
@@ -639,8 +638,7 @@ NAME="watched"$watchchecked">Yes
 ENDTAG;
 
 
-print "<BR><INPUT TYPE=\"submit\" VALUE=\" $submitvalue \">;
-print "</article>\n";
+print "<BR><INPUT TYPE=\"submit\" VALUE=\" $submitvalue \">\n";
 }
 include ("../footerinclude.php");
 

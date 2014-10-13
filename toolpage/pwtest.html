@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>password validation</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    function validatePasswordsMatch() {
+        var $pwd = $("#password");
+        var $confirm = $("#confirmPassword");
+        if ($pwd.val().length > 0 && $confirm.val().length > 0 && $pwd.val() != $confirm.val()) {
+            $("#match").text("Passwords do not match.");
+            $confirm.keyup(validatePasswordsMatch);
+            $pwd.keyup(validatePasswordsMatch);
+            console.log('alert bad');
+        } else {
+            $("#match").text("");
+            console.log('alert');
+            $confirm.unbind('keyup', validatePasswordsMatch);
+            $pwd.unbind('keyup', validatePasswordsMatch);
+        }
+    }
+
+    function validatePasswordLength() {
+        var $pwd = $("#password");
+        if ($pwd.val().length < 6) {
+            $("#lengthMsg").text("Password does not meet length requirement.");
+            // Bind to keypress so the validator re-validates as the user types when the text box gains focus.
+            $pwd.keypress(validatePasswordLength);
+        } else {
+            $("#lengthMsg").text("");
+            $pwd.unbind('keypress', validatePasswordLength);
+        }
+    }
+
+    $("#password").blur(validatePasswordLength).blur(validatePasswordsMatch);
+    $("#confirmPassword").blur(validatePasswordsMatch);
+
+});
+</script>
+</head>
+<body>
+
+  <p>Password: <input type="text" id="password" /><br />
+  Confirm: <input type="text" id="confirmPassword" /><br /><span id="match"></span><br />
+
+  <br />
+  <span id="lengthMsg"></span>  
+</p>
+</body>
+</html>

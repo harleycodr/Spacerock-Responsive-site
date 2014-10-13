@@ -1,0 +1,14 @@
+<li><a href="javascript:ShowContent('uniquename2')">Server Side Include Calls</a></li>
+<div id="uniquename2" style="display:none; border:solid black thin; padding:5px; background:#fff;">
+<div align="right"><a href="javascript:HideContent('uniquename2')">Click to hide.</a></div>
+
+</li><b>Server Side Include Call</b>
+<form>
+<textarea name="yourForm" cols=40 rows=3><!--#include virtual="header.txt"-->
+
+</textarea>
+	<br /><input type=button value="Highlight All" onClick="javascript:this.form.yourForm.focus();this.form.yourForm.select();">
+</form>
+
+
+</div>

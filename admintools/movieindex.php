@@ -164,10 +164,9 @@ else
 	$error = "<b>Error:</b>  No DB Connection.\n";
 }
 $metadescription="";
-$titletag="DVD Collection";
 
-include("./home/content/44/10809344/html/SPACEROCK/includes/headerinc.php");
-print "<article id\"content\">\n";
+include("/home/content/44/10809344/html/SPACEROCK/includes/headerinc.php");
+print "<article id=\"content\">\n";
 
 if ($error)
 {
@@ -208,6 +207,6 @@ print <<<ENDTAG
 ENDTAG;
 }
 print "</article>\n";
-include ("../footerinclude.php");
+include ("/home/content/44/10809344/html/SPACEROCK/includes/footerinc.php");
 
 ?>

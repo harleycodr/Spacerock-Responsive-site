@@ -1,0 +1,154 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #0000ff;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+
+
+}
+h1 {
+    font-size:14pt;
+    font-weight:bold;
+    text-align:center;
+}
+#master {
+
+    position: relative;
+
+    width:1000px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    margin-top: 0px;
+
+    background-color: #006600;
+
+    text-align: left;
+
+}
+
+
+
+#header {
+	height:110px;
+	width: 1000px;
+	background-color: #000000;
+	top:0px;
+	background-repeat:no-repeat;
+	margin-left:auto;
+	margin-right:auto;
+	padding:10px;
+	color:#fff;
+    float:left;
+}
+
+#loginbox {
+    width:100px;
+    float:right;
+    font-size:10px;
+}
+#loginbox a {
+    color:#fff;
+}
+
+
+#bodywrap {
+	background-color: #FFFFFF;
+	margin-top: 60px;
+	position: absolute;
+	padding: 20px;
+	top: 50px;
+	height: auto;
+	width: 980px;
+
+}
+
+#wholepage {
+	margin-left: 10px;
+	background-color: #FFFFFF;
+	margin-bottom: 20px;
+	padding: 5px;
+	width:980px;
+	height: auto;
+}
+#leftcol {
+	width:300px;
+	float:left;
+	padding:5px;
+}
+#rightcol {
+	width:300px;
+	float:left;
+	padding:5px;
+}
+#footer {
+	text-align:center;
+	width:100%;
+	height:auto;
+	clear: both;
+	padding: 10px 0px;
+	text-align: center;
+	color: #000000;
+	background-color: #FFFFFF;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #0033CC;
+	border-right-color: #0033CC;
+	border-bottom-color: #0033CC;
+	border-left-color: #0033CC;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+}
+
+ h3 {
+ font-size:8pt;
+font-family:Verdana,Arial,Tahoma,Helvetica;
+}
+     .links {
+     	font-size : 8pt;
+     	text-decoration : none;
+     	color : #0000CC;
+     	font-family : Verdana,Arial,Tahoma,Helvetica;
+     }
+
+      .footerlinks {
+     	font-size : 8pt;
+     	text-decoration : none;
+     	color : #0000CC;
+     	font-family : Verdana,Arial,Tahoma,Helvetica;
+     }
+     .grayed {
+     	color : #CCCCCC;
+     }
+li {
+	margin-bottom:1em;
+}
+     
+h1
+{
+	font-size:18pt;
+	color:#000;
+	text-align:center;
+	font-weight:bold;
+}
+h2
+{
+	font-size:14pt;
+	color:#000;
+}
+h3
+{
+	font-size:18pt;
+	color:#fff;
+}
+.tac {
+	text-align:center;
+}
+.fwb {
+	font-weight:bold;
+}
+	
