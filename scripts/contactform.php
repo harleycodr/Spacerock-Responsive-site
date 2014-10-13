@@ -19,11 +19,30 @@ $email=$_REQUEST['email'];
 $message=$_REQUEST['message'];
 $url=$_REQUEST['url'];
 
+$ip_address=$_SERVER['REMOTE_ADDR'];
 
 if(isset($url))
 {
 	// it's spam
 	$display .= "<p>Thank you</p>\n";
+}
+elseif (($name == "") || ($email == "") || ($message == ""))
+{
+	// it's another spammer
+	$display .= "<p>Thank you</p>\n";
+	
+	$to="mstevens713@gmail.com";
+	$headers="From:  Spammer tried again";
+	$subject="Spacerock.com foiled spammer attempt";
+	$body = "They tried again.  From ip $ip_address\n";
+	if(mail($to, $subject, $body, $heaers))
+	{
+		$titletag = "Go away spammer.\n";
+	}
+	else
+	{
+		$error = "<b>Mail not sent</b>\n";
+	}
 }
 else
 {

@@ -8,7 +8,7 @@ if($UMVpeMcm4GwCVCsuds36OQS5HmVNNI=="1")
 {
 	
 // make db connection
-    include ("../includes/dbconfig.php");
+    include ("../includes/dbconnect.php");
     if($link)
     {
         if ($action == "delete" AND $a)
@@ -19,7 +19,8 @@ if($UMVpeMcm4GwCVCsuds36OQS5HmVNNI=="1")
 
         }
 
-        $result=mysql_query(" SELECT ID, category, title, description, url, homepage, rating from links order by title ");
+        if($result=mysql_query(" SELECT ID, category, title, description, url, homepage, rating from links order by title "))
+		{
 
                         while ($row = mysql_fetch_array($result))
                         {
@@ -71,10 +72,16 @@ if($UMVpeMcm4GwCVCsuds36OQS5HmVNNI=="1")
 
                             $existingcategories .= "<li>$categoryname";
                       }
+		}
+		else
+		{
+			$goof=mysql_error();
+			$error = "<b>Error:</b>  $goof\n";
+		}
     }
     else
     {
-        $error="<b>Error:</b>  No db conetion.\n";
+        $error="<b>Error:</b>  No db connection.\n";
     }
 }
 else
@@ -134,7 +141,7 @@ print <<<ENDTAG
 <p><a href="add_link.php">Add New Link</a>
 <p><B>Edit/Delete Links</B>
 
-<p><TABLE WIDTH=600 BORDER=1>
+<p><TABLE WIDTH=600 BORDER=1 style="border:solid thin;">
 <TR VALIGN=TOP>
 <TD ALIGN=CENTER>
 	<B>Rating</B>
